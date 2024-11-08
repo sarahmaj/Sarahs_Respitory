@@ -20,5 +20,16 @@ describe('#sum()', function () {
     it('should add numbers', function () {
         expect(sum([1, 2, 3, 4, 5])).to.equal(15);
     })
+    it('should return numbers', function () {
+        expect(sum([1, 2, 3, 4, 5])).to.be.a("number")
+    })
+    it('should return 0 for an empty array', function () {
+        expect(sum([])).to.equal(0);
+    })
 
+
+    it('should correctly sum negative numbers', function () {
+        expect(sum([-1, -2, -3, -4, -5])).to.equal(-15);
+    })
 });
+
